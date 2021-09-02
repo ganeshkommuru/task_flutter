@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/themes/colors.dart';
 
-class CardDeselected extends StatelessWidget {
-  const CardDeselected({Key? key}) : super(key: key);
+
+class CardSelected extends StatelessWidget {
+  const CardSelected({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 140,
-      height: 160,
+      width: 160,
+      height: 180,
       decoration: BoxDecoration(
-        color: Colors.white,
+        gradient: LinearGradient(
+              colors: [AppColors.gd_start, AppColors.gd_end]),
         borderRadius: BorderRadius.all(Radius.circular(12)),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey,
-            blurRadius: 2.0,
+            color: AppColors.grey,
+            blurRadius: 14.0,
             spreadRadius: 0.0,
             offset: Offset(2.0, 2.0), // shadow direction: bottom right
           )
@@ -25,42 +28,43 @@ class CardDeselected extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           CircleAvatar(
-            backgroundImage: AssetImage('assets/play.png'),
-            radius: 10,
+            backgroundImage: AssetImage('assets/load.png'),
+            radius: 13,
           ),
-          SizedBox(height: 28),
+          SizedBox(height: 24),
           Text(
-            'Data Balance',
+            'Load Balance',
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,
               fontSize: 12,
-              color: Color(0x80131415),
+              color: AppColors.white.withOpacity(0.8),
             ),
           ),
-          SizedBox(height: 2),
+          SizedBox(height: 4),
           Text(
-            '300 MB',
+            'P 1675.00',
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w600,
-              fontSize: 20,
-              color: Color(0xFA131415),
+              fontSize: 22,
+              color: AppColors.white,
+              letterSpacing: 0.95,
             ),
           ),
-          SizedBox(height: 12),
+          SizedBox(height: 30),
           Text(
-            'of 12 GB',
+            'Valid till 26 Dec',
             style: TextStyle(
               fontFamily: 'AvenirNext',
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.normal,
               fontSize: 12,
-              color: Color(0xff272727),
+              color: AppColors.white.withOpacity(0.8),
             ),
           ),
         ],
       ),
-      
+
     );
   }
 }

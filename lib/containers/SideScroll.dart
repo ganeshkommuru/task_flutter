@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:landing_page_task/containers/CardDeselected.dart';
-import 'package:landing_page_task/containers/CardSelected.dart';
+import 'package:landing_page_task/widgets/CardDeselected.dart';
+import 'package:landing_page_task/widgets/CardEvent_2.dart';
+import 'package:landing_page_task/widgets/CardSelected.dart';
+import 'package:landing_page_task/themes/colors.dart';
+import 'package:landing_page_task/widgets/CardEvent.dart';
+
 
 class SideScroll extends StatelessWidget {
   const SideScroll({Key? key}) : super(key: key);
@@ -10,12 +14,21 @@ class SideScroll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(20.0, 32.0, 0.0, 32.0),
-      color: Color(0xFFF1F4FF),
+      decoration: BoxDecoration(
+        color: AppColors.scroll_color,
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(16),
+          bottom: Radius.circular(0),
+        ),
+      ),
       child: Column(
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               CardSelected(),
+              SizedBox(width: 12),
               CardDeselected(),
             ],
           ),
@@ -29,7 +42,7 @@ class SideScroll extends StatelessWidget {
                   fontFamily: 'AvenirNext',
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
-                  color: Color(0xA3131415),
+                  color: AppColors.text_light,
                 ),
               ),
               Spacer(),
@@ -39,11 +52,19 @@ class SideScroll extends StatelessWidget {
                   fontFamily: 'AvenirNext',
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
-                  color: Color(0xff5056ff),
+                  color: AppColors.view_all,
                 ),
               ),
-              SizedBox( width: 24
-              ),
+              SizedBox( width: 24),
+            ],
+          ),
+          SizedBox(height: 12),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              CardEvent(),
+              SizedBox(width: 8),
+              CardEvent_2(),
             ],
           ),
         ],

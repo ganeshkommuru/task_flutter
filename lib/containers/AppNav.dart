@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/containers/AppBody.dart';
+import 'package:landing_page_task/themes/colors.dart';
+
 class AppNav extends StatelessWidget {
   const AppNav({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         leading: IconButton(
           onPressed: () {},
           icon:  Icon(
             Icons.dehaze,
-            color: Colors.black,
+            color: AppColors.black,
           ),
         ),
         actions: <Widget>[
@@ -23,7 +25,7 @@ class AppNav extends StatelessWidget {
             child: IconButton(
               icon: Icon(
                 Icons.notifications_outlined,
-                color: Colors.black,
+                color: AppColors.black,
                 size: 22,
               ),
               onPressed: () {

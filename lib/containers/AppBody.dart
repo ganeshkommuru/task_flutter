@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page_task/containers/NumberSelect.dart';
+import 'package:landing_page_task/containers/LatestPromos.dart';
+import 'package:landing_page_task/containers/SpecialPromos.dart';
+import 'package:landing_page_task/widgets/NumberSelect.dart';
 import 'package:landing_page_task/containers/SideScroll.dart';
 
 class AppBody extends StatelessWidget {
@@ -12,7 +14,8 @@ class AppBody extends StatelessWidget {
         children: <Widget>[
           NumberSelect(),
           SideScroll(),
-
+          SpecialPromos(),
+          LatestPromos(),
         ],
       ),
     );
