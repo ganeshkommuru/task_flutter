@@ -20,4 +20,7 @@ class AppColors{
   static final Color t_pink = Pigment.fromString('#ffb2c6');
   static final Color tangire = Pigment.fromString('#ff8720');
   static final Color mango = Pigment.fromString('#f9ae34');
+  static final Color text_purchase = Pigment.fromString('#7b7bb3');
+  static final Color pale_salmon = Pigment.fromString('#ffa8a8');
+  static final Color cornflower = Pigment.fromString('#656afc');
 }
