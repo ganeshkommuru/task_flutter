@@ -23,14 +23,21 @@ class SideScroll extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              CardSelected(),
-              SizedBox(width: 12),
-              CardDeselected(),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                CardSelected(),
+                SizedBox(width: 12),
+                CardDeselected(),
+                SizedBox(width: 12),
+                CardDeselected(),
+                SizedBox(width: 12),
+                CardDeselected(),
+              ],
+            ),
           ),
           SizedBox(height: 27),
           Row(
@@ -59,13 +66,18 @@ class SideScroll extends StatelessWidget {
             ],
           ),
           SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              CardEvent(),
-              SizedBox(width: 8),
-              CardEvent_2(),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                CardEvent(),
+                SizedBox(width: 8),
+                CardEvent_2(),
+                SizedBox(width: 8),
+                CardEvent_2(),
+              ],
+            ),
           ),
         ],
       ),

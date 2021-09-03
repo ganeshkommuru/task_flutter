@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/containers/AppNav.dart';
+import 'widgets/AppNav.dart';
 
 void main() {
   runApp(MaterialApp(

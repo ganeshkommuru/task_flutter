@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page_task/containers/AppBody.dart';
+import 'package:landing_page_task/widgets/AppBody.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class AppNav extends StatelessWidget {
@@ -43,7 +43,7 @@ class AppNav extends StatelessWidget {
 
         ],
       ),
-      body: AppBody(),
+      body: SingleChildScrollView(child: AppBody()),
 
     );
   }

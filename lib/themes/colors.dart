@@ -15,4 +15,9 @@ class AppColors{
   static final Color event_color = Pigment.fromString('#3b41e2');
   static final Color gd_start = Pigment.fromString('#656bff');
   static final Color gd_end = Pigment.fromString('#3f46fb');
+  static final Color text_st = Pigment.fromString('#3023ae');
+  static final Color text_ed = Pigment.fromString('#c86dd7');
+  static final Color t_pink = Pigment.fromString('#ffb2c6');
+  static final Color tangire = Pigment.fromString('#ff8720');
+  static final Color mango = Pigment.fromString('#f9ae34');
 }
