@@ -63,8 +63,8 @@ flutter:
   fonts:
     - family: AvenirNext
       fonts:
-        - asset: fonts/AvenirNextLTPro-Regular.otf
-        - asset: fonts/AvenirNextLTPro-Bold.otf
+        - asset: assets/fonts/AvenirNextLTPro-Regular.otf
+        - asset: assets/fonts/AvenirNextLTPro-Bold.otf
           weight: 700
 
   # For details regarding fonts from package dependencies,

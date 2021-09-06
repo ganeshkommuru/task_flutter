@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
-import 'package:landing_page_task/widgets/Others_1.dart';
-import 'package:landing_page_task/widgets/Others_2.dart';
+import 'package:landing_page_task/widgets/CardHooQ.dart';
+import 'package:landing_page_task/widgets/CardIflix.dart';
 
-class Others extends StatelessWidget {
-  const Others({Key? key}) : super(key: key);
+class Recommendations extends StatelessWidget {
+  const Recommendations({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,13 +35,13 @@ class Others extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: <Widget>[
-                Others_1(),
+                CardHooQ(),
                 SizedBox(width: 10),
-                Others_2(),
+                CardIflix(),
                 SizedBox(width: 10),
-                Others_1(),
+                CardHooQ(),
                 SizedBox(width: 10),
-                Others_2(),
+                CardIflix(),
               ],
             ),
           )

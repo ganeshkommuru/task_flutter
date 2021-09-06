@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
@@ -41,7 +42,7 @@ class GlobeRewards extends StatelessWidget {
               image: DecorationImage(
                 colorFilter: ColorFilter.mode(
                     Colors.orange.withOpacity(0.5), BlendMode.dstATop),
-                image: AssetImage("assets/gift_box.png"),
+                image: AssetImage(AppImages.giftBox),
                 fit: BoxFit.contain,
                 alignment: Alignment.bottomRight,
               ),

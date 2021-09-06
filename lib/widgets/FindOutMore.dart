@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
-class FOM extends StatelessWidget {
-  const FOM({Key? key}) : super(key: key);
+class FindOutMore extends StatelessWidget {
+  const FindOutMore({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

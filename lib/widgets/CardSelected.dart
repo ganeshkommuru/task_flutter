@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
@@ -29,7 +30,7 @@ class CardSelected extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           CircleAvatar(
-            backgroundImage: AssetImage('assets/load.png'),
+            backgroundImage: AssetImage(AppImages.play),
             radius: 13,
           ),
           SizedBox(height: 24),

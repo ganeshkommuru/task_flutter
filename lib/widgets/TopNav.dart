@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page_task/widgets/AppBody.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class AppNav extends StatelessWidget {
@@ -7,9 +7,7 @@ class AppNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.white,
-      appBar: AppBar(
+    return AppBar(
         elevation: 0,
         backgroundColor: AppColors.white,
         leading: IconButton(
@@ -36,15 +34,12 @@ class AppNav extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20.0,0.0,20.0,0.0),
             child: CircleAvatar(
-              backgroundImage: AssetImage('assets/profile_pic.png'),
+              backgroundImage: AssetImage(AppImages.profilePic),
               radius: 16,
             ),
           ),
 
         ],
-      ),
-      body: SingleChildScrollView(child: AppBody()),
-
     );
   }
 }

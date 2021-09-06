@@ -1,3 +1,4 @@
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:flutter/material.dart';
@@ -42,69 +43,87 @@ class RoamingPlans extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 156,
-            padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+            //padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(12)),
                 image: DecorationImage(
-                  image: AssetImage('assets/roaming_plans.png'),
+                  image: AssetImage(AppImages.roamingPlans),
                   fit: BoxFit.cover,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  AppStrings.goSakto,
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    letterSpacing: 0.16,
-                    color: AppColors.white.withOpacity(0.68),
-                  ),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        AppStrings.goSakto,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                          letterSpacing: 0.16,
+                          color: AppColors.white.withOpacity(0.68),
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        AppStrings.rText,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.18,
+                          fontSize: 18,
+                          foreground: Paint()..shader = _linearGradient_2,
+                        ),
+                      ),
+                      SizedBox(height: 1),
+                      Text(
+                        AppStrings.rdis,
+                        style: TextStyle(
+                            fontFamily: 'AvenirNext',
+                            fontWeight: FontWeight.normal,
+                            letterSpacing: -0.34,
+                            color: AppColors.white,
+                            fontSize: 12),
+                      ),
+                    ],
+                  )
                 ),
-                SizedBox(height: 8),
-                Text(
-                  AppStrings.rText,
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.18,
-                    fontSize: 18,
-                    foreground: Paint()..shader = _linearGradient_2,
-                  ),
-                ),
-                SizedBox(height: 1),
-                Text(
-                  AppStrings.rdis,
-                  style: TextStyle(
-                      fontFamily: 'AvenirNext',
-                      fontWeight: FontWeight.normal,
-                      letterSpacing: -0.34,
-                      color: AppColors.white,
-                      fontSize: 12),
-                ),
+
                 Spacer(),
-                Row(
-                  children: [
-                    Text(
-                      AppStrings.rconc,
-                      style: TextStyle(
-                        fontFamily: 'AvenirNext',
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: -0.1,
-                        color: AppColors.white,
-                        fontSize: 14,
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    color: AppColors.black.withOpacity(0.17),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: 20),
+                      Text(
+                        AppStrings.rconc,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: -0.1,
+                          color: AppColors.white,
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.keyboard_arrow_right_outlined,
-                        size: 15,
-                        color: AppColors.white,
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          size: 15,
+                          color: AppColors.white,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
@@ -21,7 +22,7 @@ class Aldo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image(
-            image: AssetImage('assets/aldo.png'),
+            image: AssetImage(AppImages.aldo),
             width: 64,
             height: 28,
           ),

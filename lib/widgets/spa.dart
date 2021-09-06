@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
@@ -14,14 +15,14 @@ class Spa extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(12)),
           image: DecorationImage(
-            image: AssetImage('assets/Spa.png'),
+            image: AssetImage(AppImages.spa),
             fit: BoxFit.cover,
           )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image(
-            image: AssetImage('assets/raffles.png'),
+            image: AssetImage(AppImages.raffles),
             width: 64,
             height: 28,
           ),

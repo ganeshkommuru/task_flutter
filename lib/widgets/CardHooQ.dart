@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
-class Others_2 extends StatelessWidget {
-  Others_2({Key? key}) : super(key: key);
+class CardHooQ extends StatelessWidget {
+  const CardHooQ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +12,13 @@ class Others_2 extends StatelessWidget {
       width: 140,
       height: 168,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(16)),
-        gradient: LinearGradient(
-          colors: [AppColors.red_1, AppColors.red_2],
-        ),
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(16)),
+          color: AppColors.grape_purple),
       child: Column(
         children: [
           SizedBox(height: 31),
           Image(
-            image: AssetImage('assets/others_2.png'),
+            image: AssetImage(AppImages.hooq),
             width: 102,
             height: 43,
           ),

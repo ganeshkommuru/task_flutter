@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:landing_page_task/widgets/Netflix.dart';
-import 'package:landing_page_task/widgets/Others.dart';
+import 'package:landing_page_task/widgets/Recommendations.dart';
 import 'package:landing_page_task/widgets/Prime.dart';
 
 class Subscriptions extends StatelessWidget {
@@ -58,7 +58,7 @@ class Subscriptions extends StatelessWidget {
               )),
           Netflix(),
           Prime(),
-          Others(),
+          Recommendations(),
         ],
       ),
     );

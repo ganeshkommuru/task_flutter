@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
@@ -47,7 +48,7 @@ class SpecialPromos extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(12)),
                 image: DecorationImage(
-                  image: AssetImage('assets/special_promo.png'),
+                  image: AssetImage(AppImages.specialPromo),
                   fit: BoxFit.cover,
                 )),
             child: Column(
