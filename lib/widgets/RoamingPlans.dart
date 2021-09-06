@@ -1,3 +1,4 @@
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -26,10 +27,9 @@ class RoamingPlans extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(4,0,0,0),
+            padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
             child: Text(
-              'Roaming Plans',
-
+              AppStrings.roamingPlans,
               style: TextStyle(
                 fontFamily: 'AvenirNext',
                 fontSize: 18,
@@ -48,13 +48,12 @@ class RoamingPlans extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage('assets/roaming_plans.png'),
                   fit: BoxFit.cover,
-                )
-            ),
+                )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'GoSakto',
+                  AppStrings.goSakto,
                   style: TextStyle(
                     fontFamily: 'AvenirNext',
                     fontWeight: FontWeight.w600,
@@ -65,7 +64,7 @@ class RoamingPlans extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'Planning for a foreign trip?',
+                  AppStrings.rText,
                   style: TextStyle(
                     fontFamily: 'AvenirNext',
                     fontWeight: FontWeight.bold,
@@ -76,20 +75,19 @@ class RoamingPlans extends StatelessWidget {
                 ),
                 SizedBox(height: 1),
                 Text(
-                  "Roam worry free!",
+                  AppStrings.rdis,
                   style: TextStyle(
                       fontFamily: 'AvenirNext',
                       fontWeight: FontWeight.normal,
                       letterSpacing: -0.34,
                       color: AppColors.white,
-                      fontSize: 12
-                  ),
+                      fontSize: 12),
                 ),
                 Spacer(),
                 Row(
                   children: [
                     Text(
-                      'Explore Roaming Packs',
+                      AppStrings.rconc,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontWeight: FontWeight.w600,
@@ -110,7 +108,6 @@ class RoamingPlans extends StatelessWidget {
                 ),
               ],
             ),
-
           )
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:landing_page_task/widgets/CardFacebook.dart';
 import 'package:landing_page_task/widgets/CardSpotify.dart';
@@ -23,8 +24,7 @@ class LatestPromos extends StatelessWidget {
             children: [
               SizedBox(width: 4),
               Text(
-                'Latest Promos',
-
+                AppStrings.latestPromos,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 18,
@@ -34,7 +34,7 @@ class LatestPromos extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                'View All',
+                AppStrings.viewAll,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontWeight: FontWeight.w600,
@@ -42,7 +42,7 @@ class LatestPromos extends StatelessWidget {
                   color: AppColors.view_all,
                 ),
               ),
-              SizedBox( width: 24),
+              SizedBox(width: 24),
             ],
           ),
           SizedBox(height: 12),
@@ -60,7 +60,6 @@ class LatestPromos extends StatelessWidget {
               ],
             ),
           )
-
         ],
       ),
     );

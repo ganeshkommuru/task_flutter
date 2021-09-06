@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:landing_page_task/widgets/Netflix.dart';
 import 'package:landing_page_task/widgets/Others.dart';
@@ -17,17 +18,19 @@ class Subscriptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 891,
       padding: EdgeInsets.fromLTRB(20, 40, 0, 32),
       decoration: BoxDecoration(
         color: AppColors.black,
-        borderRadius: BorderRadius.all(Radius.circular(15))
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(15),
+          bottom: Radius.circular(0),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-              'My Subscriptions',
+            AppStrings.mySub,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontSize: 14,
@@ -37,26 +40,22 @@ class Subscriptions extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Text(
-            'With Remaning 12GB,',
-            style: TextStyle(
-              fontFamily: 'AvenirNext',
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              letterSpacing: -0.4,
-              foreground: Paint()..shader = _linearGradient_3,
-            )
-          ),
-          Text(
-              'You can watch 640 min of video',
+          Text(AppStrings.remainingGb,
               style: TextStyle(
                 fontFamily: 'AvenirNext',
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 letterSpacing: -0.4,
                 foreground: Paint()..shader = _linearGradient_3,
-              )
-          ),
+              )),
+          Text(AppStrings.reaminingMin,
+              style: TextStyle(
+                fontFamily: 'AvenirNext',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: -0.4,
+                foreground: Paint()..shader = _linearGradient_3,
+              )),
           Netflix(),
           Prime(),
           Others(),

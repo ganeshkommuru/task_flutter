@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:landing_page_task/widgets/aldo.dart';
 import 'package:landing_page_task/widgets/spa.dart';
@@ -16,7 +17,7 @@ class Purchase extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
-            '  Here is what you can get',
+            AppStrings.offerText,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontSize: 15,

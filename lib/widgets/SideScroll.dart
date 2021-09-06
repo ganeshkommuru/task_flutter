@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/widgets/CardDeselected.dart';
 import 'package:landing_page_task/widgets/CardEvent_2.dart';
 import 'package:landing_page_task/widgets/CardSelected.dart';
@@ -44,7 +45,7 @@ class SideScroll extends StatelessWidget {
             children: <Widget>[
               SizedBox(width: 6),
               Text(
-                  'Recommended',
+                  AppStrings.recommended,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontWeight: FontWeight.w600,
@@ -54,7 +55,7 @@ class SideScroll extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                  'View All',
+                 AppStrings.viewAll,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontWeight: FontWeight.w600,

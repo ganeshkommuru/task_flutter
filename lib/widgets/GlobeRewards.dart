@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class GlobeRewards extends StatelessWidget {
@@ -20,10 +21,9 @@ class GlobeRewards extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(4,0,0,0),
+            padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
             child: Text(
-              'Globe Rewards',
-
+              AppStrings.globeRewards,
               style: TextStyle(
                 fontFamily: 'AvenirNext',
                 fontSize: 18,
@@ -38,23 +38,23 @@ class GlobeRewards extends StatelessWidget {
             height: 84,
             padding: EdgeInsets.fromLTRB(16, 16, 0, 0),
             decoration: BoxDecoration(
-                image: DecorationImage(
+              image: DecorationImage(
                 colorFilter: ColorFilter.mode(
-                Colors.orange.withOpacity(0.5), BlendMode.dstATop),
+                    Colors.orange.withOpacity(0.5), BlendMode.dstATop),
                 image: AssetImage("assets/gift_box.png"),
                 fit: BoxFit.contain,
                 alignment: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-                gradient: LinearGradient(
-                  colors: [AppColors.tangire,AppColors.mango],
-                ),
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              gradient: LinearGradient(
+                colors: [AppColors.tangire, AppColors.mango],
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                    'YOUR REWARD POINTS',
+                  AppStrings.gText,
                   style: TextStyle(
                     fontFamily: 'AvenirNext',
                     fontWeight: FontWeight.w600,
@@ -67,7 +67,7 @@ class GlobeRewards extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '7250',
+                      AppStrings.greward,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontWeight: FontWeight.bold,
@@ -77,7 +77,7 @@ class GlobeRewards extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      ' Pts',
+                      AppStrings.gpts,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontWeight: FontWeight.w500,
@@ -89,7 +89,6 @@ class GlobeRewards extends StatelessWidget {
                 ),
               ],
             ),
-
           )
         ],
       ),

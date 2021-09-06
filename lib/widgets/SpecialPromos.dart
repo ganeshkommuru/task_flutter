@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class SpecialPromos extends StatelessWidget {
@@ -26,15 +28,14 @@ class SpecialPromos extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(4,0,0,0),
+            padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
             child: Text(
-              'Special Promos',
-
+              AppStrings.specialPromos,
               style: TextStyle(
                 fontFamily: 'AvenirNext',
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                  foreground: Paint()..shader = _linearGradient_1,
+                foreground: Paint()..shader = _linearGradient_1,
               ),
             ),
           ),
@@ -42,75 +43,89 @@ class SpecialPromos extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 156,
-            padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+            //padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(12)),
-              image: DecorationImage(
-                image: AssetImage('assets/special_promo.png'),
-                fit: BoxFit.cover,
-              )
-            ),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                image: DecorationImage(
+                  image: AssetImage('assets/special_promo.png'),
+                  fit: BoxFit.cover,
+                )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  'GoSakto',
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    letterSpacing: 0.16,
-                    color: AppColors.white.withOpacity(0.68),
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'Create What Matters',
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.18,
-                    fontSize: 18,
-                    foreground: Paint()..shader = _linearGradient_2,
-                  ),
-                ),
-                SizedBox(height: 1),
-                Text(
-                  "Promo that's all for you!",
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontWeight: FontWeight.normal,
-                    letterSpacing: -0.34,
-                    color: AppColors.white,
-                    fontSize: 12
+                SizedBox(height: 20),
+                Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        AppStrings.goSakto,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                          letterSpacing: 0.16,
+                          color: AppColors.white.withOpacity(0.68),
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        AppStrings.spText,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.18,
+                          fontSize: 18,
+                          foreground: Paint()..shader = _linearGradient_2,
+                        ),
+                      ),
+                      SizedBox(height: 1),
+                      Text(
+                        AppStrings.spDis,
+                        style: TextStyle(
+                            fontFamily: 'AvenirNext',
+                            fontWeight: FontWeight.normal,
+                            letterSpacing: -0.34,
+                            color: AppColors.white,
+                            fontSize: 12),
+                      ),
+                    ],
                   ),
                 ),
                 Spacer(),
-                Row(
-                  children: [
-                    Text(
-                      'Create your own Promo',
-                      style: TextStyle(
-                        fontFamily: 'AvenirNext',
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: -0.1,
-                        color: AppColors.white,
-                        fontSize: 14,
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      color: AppColors.black.withOpacity(0.3),
                       ),
-                    ),
-                    IconButton(
+                  child: Row(
+                    children: [
+                      SizedBox(width: 20),
+                      Text(
+                        AppStrings.spconc,
+                        style: TextStyle(
+                          fontFamily: 'AvenirNext',
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: -0.1,
+                          color: AppColors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                      IconButton(
                         onPressed: () {},
                         icon: Icon(
-                            Icons.keyboard_arrow_right_outlined,
+                          Icons.keyboard_arrow_right_outlined,
                           size: 15,
                           color: AppColors.white,
                         ),
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-
           )
         ],
       ),

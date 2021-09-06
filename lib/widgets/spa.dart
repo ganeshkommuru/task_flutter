@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class Spa extends StatelessWidget {
@@ -15,17 +16,20 @@ class Spa extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage('assets/Spa.png'),
             fit: BoxFit.cover,
-          )
-      ),
+          )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image(image: AssetImage('assets/raffles.png'),width: 64,height: 28,),
+          Image(
+            image: AssetImage('assets/raffles.png'),
+            width: 64,
+            height: 28,
+          ),
           SizedBox(height: 29),
           Row(
             children: [
               Text(
-                '1000',
+                AppStrings.thousand,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 16,
@@ -35,7 +39,7 @@ class Spa extends StatelessWidget {
                 ),
               ),
               Text(
-                ' Pts',
+                AppStrings.gpts,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 14,
@@ -47,7 +51,7 @@ class Spa extends StatelessWidget {
           ),
           SizedBox(height: 27),
           Text(
-            'Get Hair Spa',
+            AppStrings.sp1,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontSize: 15,
@@ -57,7 +61,7 @@ class Spa extends StatelessWidget {
             ),
           ),
           Text(
-            '& Styling',
+            AppStrings.sp2,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontSize: 15,

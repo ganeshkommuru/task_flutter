@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class CardFacebook extends StatelessWidget {
@@ -15,22 +16,21 @@ class CardFacebook extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage('assets/facebook_bg.png'),
             fit: BoxFit.cover,
-          )
-      ),
+          )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Image(image: AssetImage(
-              'assets/facebook_logo.png'
-          ),
+          Image(
+            image: AssetImage('assets/facebook_logo.png'),
             width: 18,
-            height: 18,),
+            height: 18,
+          ),
           SizedBox(height: 15),
           Row(
             children: [
               Text(
-                'Facebook',
+                AppStrings.lFacebook,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 12,
@@ -40,7 +40,7 @@ class CardFacebook extends StatelessWidget {
                 ),
               ),
               Text(
-                ' Surf',
+                AppStrings.lSurf,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 12,
@@ -53,12 +53,11 @@ class CardFacebook extends StatelessWidget {
           ),
           SizedBox(height: 38),
           Container(
-
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Get Pack for',
+                  AppStrings.lfText,
                   style: TextStyle(
                     fontFamily: 'AvenirNext',
                     fontSize: 14,
@@ -71,7 +70,7 @@ class CardFacebook extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'P 50.00',
+                      AppStrings.lfPrice,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontSize: 14,
@@ -81,7 +80,7 @@ class CardFacebook extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '  /m',
+                      AppStrings.lperM,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontSize: 10,
@@ -95,9 +94,9 @@ class CardFacebook extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
-    );;
+    );
+    ;
   }
 }

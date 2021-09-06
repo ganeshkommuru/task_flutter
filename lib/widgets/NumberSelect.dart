@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/themes/colors.dart';
+import 'package:landing_page_task/resources/strings.dart';
 
 class NumberSelect extends StatelessWidget {
   const NumberSelect({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class NumberSelect extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'My Prepaid',
+            AppStrings.my_pr,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontSize: 12,
@@ -27,7 +28,7 @@ class NumberSelect extends StatelessWidget {
           Row(
             children: <Widget>[
               Text(
-                '092787368820',
+                AppStrings.num,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 16,

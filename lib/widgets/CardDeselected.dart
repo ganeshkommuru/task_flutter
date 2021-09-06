@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class CardDeselected extends StatelessWidget {
@@ -31,7 +32,7 @@ class CardDeselected extends StatelessWidget {
           ),
           SizedBox(height: 28),
           Text(
-            'Data Balance',
+            AppStrings.balance,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,
@@ -41,7 +42,7 @@ class CardDeselected extends StatelessWidget {
           ),
           SizedBox(height: 2),
           Text(
-            '300 MB',
+            AppStrings.dataBalance,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w600,
@@ -51,7 +52,7 @@ class CardDeselected extends StatelessWidget {
           ),
           SizedBox(height: 12),
           Text(
-            'of 12 GB',
+            AppStrings.totalBalance,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,

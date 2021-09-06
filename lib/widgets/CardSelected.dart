@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 
@@ -33,7 +34,7 @@ class CardSelected extends StatelessWidget {
           ),
           SizedBox(height: 24),
           Text(
-            'Load Balance',
+            AppStrings.cardSelected,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,
@@ -43,7 +44,7 @@ class CardSelected extends StatelessWidget {
           ),
           SizedBox(height: 4),
           Text(
-            'P 1675.00',
+            AppStrings.selectedPrice,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w600,
@@ -54,7 +55,7 @@ class CardSelected extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Text(
-            'Valid till 26 Dec',
+            AppStrings.selectedValidity,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.normal,

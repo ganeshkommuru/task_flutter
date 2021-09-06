@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class CardEvent_2 extends StatelessWidget {
@@ -27,7 +28,7 @@ class CardEvent_2 extends StatelessWidget {
         children: <Widget>[
           // SizedBox(height: 28),
           Text(
-            'GoUNLI180',
+            AppStrings.event_2,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w600,
@@ -37,7 +38,7 @@ class CardEvent_2 extends StatelessWidget {
             ),
           ),
           Text(
-            '15 days UNLI to Globe',
+            AppStrings.event_2_time,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,

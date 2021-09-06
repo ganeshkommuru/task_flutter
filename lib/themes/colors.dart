@@ -23,4 +23,7 @@ class AppColors{
   static final Color text_purchase = Pigment.fromString('#7b7bb3');
   static final Color pale_salmon = Pigment.fromString('#ffa8a8');
   static final Color cornflower = Pigment.fromString('#656afc');
+  static final Color grape_purple = Pigment.fromString('#511158');
+  static final Color red_1 = Pigment.fromString('#941d1d');
+  static final Color red_2 = Pigment.fromString('#771313');
 }

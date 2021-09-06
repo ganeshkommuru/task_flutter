@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 class CardSpotify extends StatelessWidget {
@@ -16,22 +17,21 @@ class CardSpotify extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage('assets/spotify_bg.png'),
             fit: BoxFit.cover,
-          )
-      ),
+          )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Image(image: AssetImage(
-              'assets/spotify_logo.png'
+          Image(
+            image: AssetImage('assets/spotify_logo.png'),
+            width: 18,
+            height: 18,
           ),
-          width: 18,
-          height: 18,),
           SizedBox(height: 15),
           Row(
             children: [
               Text(
-                  'Spotify',
+                AppStrings.lSpotify,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 12,
@@ -41,7 +41,7 @@ class CardSpotify extends StatelessWidget {
                 ),
               ),
               Text(
-                ' Premium',
+                AppStrings.lsPremium,
                 style: TextStyle(
                   fontFamily: 'AvenirNext',
                   fontSize: 12,
@@ -54,12 +54,11 @@ class CardSpotify extends StatelessWidget {
           ),
           SizedBox(height: 38),
           Container(
-
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Subscribe for',
+                  AppStrings.lSubscription,
                   style: TextStyle(
                     fontFamily: 'AvenirNext',
                     fontSize: 14,
@@ -72,7 +71,7 @@ class CardSpotify extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'P 129.00',
+                      AppStrings.lPrice,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontSize: 14,
@@ -82,7 +81,7 @@ class CardSpotify extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '  /m',
+                      AppStrings.lperM,
                       style: TextStyle(
                         fontFamily: 'AvenirNext',
                         fontSize: 10,
@@ -96,7 +95,6 @@ class CardSpotify extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
     );
