@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/screens/Lifestyle.dart';
 import 'package:landing_page_task/screens/More.dart';
 import 'package:landing_page_task/screens/Wallet.dart';
@@ -8,6 +9,9 @@ import 'package:landing_page_task/themes/colors.dart';
 void main() {
 
   runApp(MaterialApp(
+    theme: new ThemeData(
+      primaryColor: AppColors.white,
+    ),
     home: Home()
   ));
 }
@@ -43,14 +47,14 @@ class _HomeState extends State<Home> {
       backgroundColor: AppColors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: AppColors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon:  Icon(
-            Icons.dehaze,
-            color: AppColors.black,
-          ),
-        ),
+        //backgroundColor: AppColors.white,
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon:  Icon(
+        //     Icons.dehaze,
+        //     color: AppColors.black,
+        //   ),
+        // ),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(0.0,0.0,0.0,0.0),
@@ -74,6 +78,49 @@ class _HomeState extends State<Home> {
           ),
 
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+                accountName: Text(
+                    AppStrings.my_pr,
+                  style: TextStyle(
+                    fontFamily: 'AvenirNext',
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.white.withOpacity(0.64),
+
+                  ),
+                ),
+                accountEmail: Text(
+                    AppStrings.num,
+                  style: TextStyle(
+                    fontFamily: 'AvenirNext',
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.2,
+                    color: AppColors.white,
+                  ),
+                ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('assets/profile_pic.png'),
+                radius: 26,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.purplishBlue,
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 24, 0, 24),
+              child: Text('About Globe',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 0, 0, 24),
+              child: Text('Payment',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+            )
+          ],
+        ),
       ),
       body:tabs.elementAt(_currentIndex),
 

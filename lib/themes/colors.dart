@@ -28,4 +28,5 @@ class AppColors{
   static final Color red_2 = Pigment.fromString('#771313');
   static final Color blackNav = Pigment.fromString('#272727');
   static final Color navSelected = Pigment.fromString('#5056ff');
+  static final Color purplishBlue = Pigment.fromString('#3e44f4');
 }
