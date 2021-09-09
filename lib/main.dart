@@ -7,13 +7,11 @@ import 'widgets/AppBody.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
 void main() {
-
   runApp(MaterialApp(
-    theme: new ThemeData(
-      primaryColor: AppColors.white,
-    ),
-    home: Home()
-  ));
+      theme: new ThemeData(
+        primaryColor: AppColors.white,
+      ),
+      home: Home()));
 }
 
 class Home extends StatefulWidget {
@@ -24,7 +22,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   int _currentIndex = 0;
   //PageController _pageController = PageController();
   final tabs = [
@@ -47,17 +44,9 @@ class _HomeState extends State<Home> {
       backgroundColor: AppColors.white,
       appBar: AppBar(
         elevation: 0,
-        //backgroundColor: AppColors.white,
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon:  Icon(
-        //     Icons.dehaze,
-        //     color: AppColors.black,
-        //   ),
-        // ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(0.0,0.0,0.0,0.0),
+            padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
             child: IconButton(
               icon: Icon(
                 Icons.notifications_outlined,
@@ -70,39 +59,37 @@ class _HomeState extends State<Home> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20.0,0.0,20.0,0.0),
+            padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
             child: CircleAvatar(
               backgroundImage: AssetImage('assets/profile_pic.png'),
               radius: 16,
             ),
           ),
-
         ],
       ),
       drawer: Drawer(
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-                accountName: Text(
-                    AppStrings.my_pr,
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.white.withOpacity(0.64),
-
-                  ),
+              accountName: Text(
+                AppStrings.my_pr,
+                style: TextStyle(
+                  fontFamily: 'AvenirNext',
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.white.withOpacity(0.64),
                 ),
-                accountEmail: Text(
-                    AppStrings.num,
-                  style: TextStyle(
-                    fontFamily: 'AvenirNext',
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.2,
-                    color: AppColors.white,
-                  ),
+              ),
+              accountEmail: Text(
+                AppStrings.num,
+                style: TextStyle(
+                  fontFamily: 'AvenirNext',
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.2,
+                  color: AppColors.white,
                 ),
+              ),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/profile_pic.png'),
                 radius: 26,
@@ -113,17 +100,22 @@ class _HomeState extends State<Home> {
             ),
             Container(
               padding: EdgeInsets.fromLTRB(20, 24, 0, 24),
-              child: Text('About Globe',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+              child: Text(
+                'About Globe',
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+              ),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(20, 0, 0, 24),
-              child: Text('Payment',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+              child: Text(
+                'Payment',
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+              ),
             )
           ],
         ),
       ),
-      body:tabs.elementAt(_currentIndex),
-
+      body: tabs.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
@@ -175,5 +167,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-

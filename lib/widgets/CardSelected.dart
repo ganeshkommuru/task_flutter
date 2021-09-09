@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_task/core/models/dataBalanceModel.dart';
 import 'package:landing_page_task/resources/images.dart';
 import 'package:landing_page_task/resources/strings.dart';
 import 'package:landing_page_task/themes/colors.dart';
 
-
 class CardSelected extends StatelessWidget {
-  const CardSelected({Key? key}) : super(key: key);
+  //const CardSelected({Key? key}) : super(key: key);
+
+  final dynamic dataBalance;
+  CardSelected({required this.dataBalance});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +16,8 @@ class CardSelected extends StatelessWidget {
       width: 160,
       height: 180,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-              colors: [AppColors.gd_start, AppColors.gd_end]),
+        gradient:
+            LinearGradient(colors: [AppColors.gd_start, AppColors.gd_end]),
         borderRadius: BorderRadius.all(Radius.circular(12)),
         boxShadow: [
           BoxShadow(
@@ -30,12 +33,12 @@ class CardSelected extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           CircleAvatar(
-            backgroundImage: AssetImage(AppImages.play),
+            backgroundImage: AssetImage(dataBalance.image),
             radius: 13,
           ),
           SizedBox(height: 24),
           Text(
-            AppStrings.cardSelected,
+            dataBalance.balancetype,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w500,
@@ -45,7 +48,7 @@ class CardSelected extends StatelessWidget {
           ),
           SizedBox(height: 4),
           Text(
-            AppStrings.selectedPrice,
+            dataBalance.price,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.w600,
@@ -56,7 +59,7 @@ class CardSelected extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Text(
-            AppStrings.selectedValidity,
+            dataBalance.validity,
             style: TextStyle(
               fontFamily: 'AvenirNext',
               fontWeight: FontWeight.normal,
@@ -66,7 +69,6 @@ class CardSelected extends StatelessWidget {
           ),
         ],
       ),
-
     );
   }
 }

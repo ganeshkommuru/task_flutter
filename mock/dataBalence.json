@@ -1,0 +1,36 @@
+{
+  "databalancecard" : [
+    {
+      "id" : 0,
+      "indicatorvalue" : 0.5,
+      "image" : "assets/load.png",
+      "balancetype" : "Load Balance",
+      "price" : "P 1675.00",
+      "validity" : "Valid till 26 Dec"
+    },
+    {
+      "id" : 1,
+      "indicatorvalue" : 1.0,
+      "image" : "assets/play.png",
+      "balancetype" : "Data Balance",
+      "price" : "P 1075.00",
+      "validity" : "Valid till 12 Dec"
+    },
+    {
+      "id" : 2,
+      "indicatorvalue" : 1.5,
+      "image" : "assets/load.png",
+      "balancetype" : "Load Balance 2",
+      "price" : "P 1675.00",
+      "validity" : "Valid till 26 Dec"
+    },
+    {
+      "id" : 3,
+      "indicatorvalue" : 2.0,
+      "image" : "assets/play.png",
+      "balancetype" : "Data Balance 2",
+      "price" : "P 1075.00",
+      "validity" : "Valid till 12 Dec"
+    }
+  ]
+}
