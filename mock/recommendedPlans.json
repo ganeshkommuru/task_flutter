@@ -1,0 +1,24 @@
+{
+    "plans" : [
+        {
+            "plan" : "GoUNLI350",
+            "duration" : "30 days UNLI to Globe",
+            "planType" : "to Globe"
+        },
+        {
+            "plan" : "GoUNLI180",
+            "duration" : "15 days UNLI to Globe",
+            "planType" : "to Globe"
+        },
+        {
+            "plan" : "GoUNLI90",
+            "duration" : "7 days UNLI to Globe",
+            "planType" : "to Globe"
+        },
+        {
+            "plan" : "GoUNLI10",
+            "duration" : "1 day UNLI to Globe",
+            "planType" : "to Globe"
+        }
+    ]    
+}

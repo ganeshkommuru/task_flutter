@@ -1,30 +1,31 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:landing_page_task/core/models/dataBalanceModel.dart';
-import 'package:landing_page_task/core/services/dataBalanceServices.dart';
+import 'package:landing_page_task/core/services/recommendationServices.dart';
 import 'package:landing_page_task/widgets/BalanceCardsList.dart';
+import 'package:landing_page_task/widgets/RecommendationCardsList.dart';
 
-class DataBalanceContainer extends StatefulWidget {
-  const DataBalanceContainer({Key? key}) : super(key: key);
+class RecommendationContainer extends StatefulWidget {
+  const RecommendationContainer({Key? key}) : super(key: key);
 
   @override
-  _DataBalanceContainerState createState() => _DataBalanceContainerState();
+  _RecommendationContainerState createState() =>
+      _RecommendationContainerState();
 }
 
-class _DataBalanceContainerState extends State<DataBalanceContainer> {
-  late Future dataBalanceValue;
+class _RecommendationContainerState extends State<RecommendationContainer> {
+  late Future recommendationData;
   @override
   void initState() {
     super.initState();
-    DashboardService dataBalance = DashboardService();
-    dataBalanceValue = dataBalance.getDataBalanceDetails(context);
+    RecommendationService dataBalance = RecommendationService();
+    recommendationData = dataBalance.getRecommendationPlanDetails(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: dataBalanceValue,
+      future: recommendationData,
       builder: (context, snapshot) {
         dynamic data = snapshot.data;
         if (!snapshot.hasData) {
@@ -41,7 +42,7 @@ class _DataBalanceContainerState extends State<DataBalanceContainer> {
           if (data == null) {
             return Text('noData');
           } else {
-            return BalanceCardsList(dataBalance: data.databalancecard);
+            return RecommendationCardsList(recommendationCards: data.plans);
           }
           // return Databalancecard(
           //   dataBalance: snapshot.data.databalancecard,

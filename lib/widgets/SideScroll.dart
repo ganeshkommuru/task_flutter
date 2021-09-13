@@ -1,12 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/containers/dataBalanceContainer.dart';
+import 'package:landing_page_task/containers/recommendationContainer.dart';
 import 'package:landing_page_task/resources/strings.dart';
-import 'package:landing_page_task/widgets/CardDeselected.dart';
-import 'package:landing_page_task/widgets/CardEvent_2.dart';
-import 'package:landing_page_task/widgets/CardSelected.dart';
 import 'package:landing_page_task/themes/colors.dart';
-import 'package:landing_page_task/widgets/CardEvent.dart';
 
 class SideScroll extends StatelessWidget {
   const SideScroll({Key? key}) : super(key: key);
@@ -53,19 +50,7 @@ class SideScroll extends StatelessWidget {
             ],
           ),
           SizedBox(height: 12),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                CardEvent(),
-                SizedBox(width: 8),
-                CardEvent_2(),
-                SizedBox(width: 8),
-                CardEvent_2(),
-              ],
-            ),
-          ),
+          RecommendationContainer(),
         ],
       ),
     );

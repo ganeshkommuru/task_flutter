@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/core/models/dataBalanceModel.dart';
-import 'package:landing_page_task/widgets/CardSelected.dart';
-import 'package:landing_page_task/widgets/cardBalance.dart';
-import 'package:flutter/src/rendering/box.dart';
+
 import 'package:landing_page_task/themes/colors.dart';
 
 // ignore: must_be_immutable
@@ -18,28 +16,10 @@ class BalanceCardsList extends StatefulWidget {
 }
 
 class _BalanceCardsListState extends State<BalanceCardsList> {
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    int _currentIndex = 0;
-    //bool curr = false;
-    // final children = <Widget>[];
-    // for (var i = 0; i < dataBalance.length; i++) {
-    //   children.add(new SizedBox(width: 12));
-    //   children.add(new CardBalance(dataBalance: dataBalance[i]));
-    // }
-    // children.add(new SizedBox(width: 12));
-    // return Container(
-    //   padding: EdgeInsets.fromLTRB(0, 0, 0, 27),
-    //   child: SingleChildScrollView(
-    //     scrollDirection: Axis.horizontal,
-    //     child: Row(
-    //       mainAxisAlignment: MainAxisAlignment.start,
-    //       crossAxisAlignment: CrossAxisAlignment.start,
-    //       children: children,
-    //     ),
-    //   ),
-    // );
-
     return Container(
       height: 180,
       child: ListView.builder(
@@ -150,26 +130,3 @@ class _BalanceCardsListState extends State<BalanceCardsList> {
     );
   }
 }
-
-
-// child: index == _currentIndex
-//                   ? new Container(
-//                       child: Row(
-//                         children: [
-//                           CardSelected(
-//                             dataBalance: widget.dataBalance[index][index],
-//                           ),
-//                           SizedBox(width: 12),
-//                         ],
-//                       ),
-//                     )
-//                   : new Container(
-//                       child: Row(
-//                         children: [
-//                           CardBalance(
-//                             dataBalance: widget.dataBalance[index][index],
-//                           ),
-//                           SizedBox(width: 12),
-//                         ],
-//                       ),
-//                     )
