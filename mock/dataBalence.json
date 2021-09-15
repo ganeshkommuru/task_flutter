@@ -23,14 +23,6 @@
       "balancetype" : "Load Balance 2",
       "price" : "P 1675.00",
       "validity" : "Valid till 26 Dec"
-    },
-    {
-      "id" : 3,
-      "indicatorvalue" : 2.0,
-      "image" : "assets/play.png",
-      "balancetype" : "Data Balance 2",
-      "price" : "P 1075.00",
-      "validity" : "Valid till 12 Dec"
     }
   ]
 }
