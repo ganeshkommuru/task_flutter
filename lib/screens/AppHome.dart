@@ -5,7 +5,6 @@ import 'package:landing_page_task/screens/More.dart';
 import 'package:landing_page_task/screens/Wallet.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:landing_page_task/widgets/AppBody.dart';
-import 'package:landing_page_task/widgets/test.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

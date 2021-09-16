@@ -42,7 +42,7 @@ class _DataBalanceContainerState extends State<DataBalanceContainer> {
           child: CircularProgressIndicator(),
         );
       } else {
-        print(provider.card.databalancecard);
+        //print(provider.card.databalancecard);
         return BalanceCardsList(dataBalance: provider.card.databalancecard);
       }
     });

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page_task/provider/providerBalance.dart';
-import 'package:landing_page_task/widgets/AppHome.dart';
+import 'package:landing_page_task/screens/AppHome.dart';
 import 'package:landing_page_task/themes/colors.dart';
 import 'package:provider/provider.dart';
 

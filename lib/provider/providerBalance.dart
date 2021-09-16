@@ -7,7 +7,7 @@ import 'package:http/http.dart';
 
 class Balanceprovider with ChangeNotifier {
   bool loading = false;
-  late DataBalance card;
+  DataBalance card = DataBalance(databalancecard: []);
 
   set setCardModel(DataBalance updatedcard) {
     print(' in provider folder__________________> /n $updatedcard');
