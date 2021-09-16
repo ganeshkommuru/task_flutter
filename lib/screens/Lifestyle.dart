@@ -17,7 +17,7 @@ class _LifestyleState extends State<Lifestyle> {
   late Balanceprovider balanceprovider;
   @override
   Widget build(BuildContext context) {
-    balanceprovider = Provider.of<Balanceprovider>(context, listen: true);
+    balanceprovider = Provider.of<Balanceprovider>(context, listen: false);
     return Container(
       width: double.infinity,
       color: AppColors.pale_salmon,
