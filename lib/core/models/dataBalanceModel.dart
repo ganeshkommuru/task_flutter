@@ -10,6 +10,11 @@ class DataBalance {
             json["databalancecard"].map((x) => Databalancecard.fromJson(x))),
       );
 
+  factory DataBalance.fromFirestore(List data) => DataBalance(
+        databalancecard: List<Databalancecard>.from(
+            data.map((e) => Databalancecard.fromJson(e))),
+      );
+
   Map<String, dynamic> toJson() => {
         "databalancecard":
             List<dynamic>.from(databalancecard.map((x) => x.toJson())),
